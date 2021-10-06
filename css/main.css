@@ -273,33 +273,43 @@ footer {
 /* -----Header styles------- */
 
 header{
-
+  padding: 15px 0;
 }
 
 .content-wrapper {
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto;
+}
 
+header .content-wrapper {
+  margin: 0;
 }
 
 
 
 header nav {
-width: 100%;
+  width: 60%;
 }
 
 header nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   justify-content: space-between;
+  width: 60%;
 }
 
 header nav a {
   text-decoration: none;
+}
+
+.header-divider {
+  width: 100%;
 }
 
 /* --------- Mobile Styles - Home Page----- */
@@ -329,16 +339,30 @@ aside .form {
 
 .features {
 border: solid 1px red;
+
+}
+
+.features article {
+  width: 65%;
 }
 
 .features-items {
   border: solid 1px green;
-
 }
+
+.features p {
+  margin: 0;
+}
+
 
 .reviews {
   border: 1px solid blue;
+}
 
+.reviews h3 {
+  width: 85%;
+  font-size: 2rem;
+  margin: 25px auto;
 }
 
 /* Mobile Styles - About Page */
@@ -426,6 +450,16 @@ footer{
   flex-basis:100%;
 
 }
+
+footer .content-wrapper{
+  width: 55%;
+  margin: 50px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
 
 .contact {
 
