@@ -169,22 +169,6 @@ textarea {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
 
 /* ==========================================================================
    Print styles.
@@ -319,22 +303,25 @@ margin: 0 auto;
 }
 
 .hero-area {
-
+  width: 80%;
 
 }
 
 aside {
-  /* display: flex; */
-
+  display: flex;  
+  flex-flow: row wrap;
 }
 
 aside .form-description {
-
+ flex: 1;
+ padding: 1rem;
 }
 
 aside .form {
-  display: flex;
-  flex-flow: row wrap;
+flex: 1;
+display: flex;
+flex-direction: column;
+padding: 1rem ;
 }
 
 .features {
@@ -454,6 +441,7 @@ footer{
 footer .content-wrapper{
   width: 55%;
   margin: 50px 0;
+  display: flex;
 }
 
 footer p {
@@ -473,3 +461,200 @@ footer .social-icons {
 .copyright {
 
 }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media only screen and (min-width: 768px) {
+    /*Tablet styles for home page here*/
+    
+    /* Generic styles */
+    
+  
+    /*Header styles for tablet */
+
+    header {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    header .content-wrapper{
+      justify-content: space-between;
+      width: 80%;
+      border: 1px solid purple;
+    }
+    header nav {
+      width: 30%;
+    }
+
+    header nav ul {
+      justify-content: space-around ;
+      border: 1px solid green;
+    }
+
+    .header-divider {
+      display: none;
+    }
+
+    /* Hero area styles for tablet */
+    .hero-area {
+      width: 100%;
+      border: 1px solid red ;
+    }
+
+    /* Aside area styles for tablet */
+
+    aside {
+      border: 1px solid purple;  
+      width: 100%;  
+      display: flex;
+      justify-content: space-evenly;
+      flex-flow: row;
+    }
+/* I don't appear to have an aside.content wrapper  in the html for the home page index.html, is it called something else?
+
+    aside .content-wrapper{
+      border:1px solid red;
+      display: flex;
+      justify-content: center;
+      flex-flow: row;
+    }
+*/ 
+
+  .form-description {
+    border: 1px solid blue;
+    width: 50%; 
+  }
+
+  .form {
+    border: 1px solid green;
+    width: 50%;
+  }
+
+/* Features area styles for tablet */
+
+  .features {
+    width: 100%;
+  }
+
+  .features article{
+    border: 1px solid green;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 25%;
+    padding: 25px;
+  }
+
+/* Review area styles for tablet */
+
+  .reviews .content-wrapper {
+    border: 1px solid green;
+  }
+
+
+  .reviews article {
+    border: 1px solid red;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    flex-flow: column;
+    flex-basis: auto;
+  }
+
+  .review-company-name {
+    border: 1px solid green
+    width:60%;  
+  }
+
+  .reviews-item-description {
+    border: 1px solid blue
+  }
+
+  l/* Footer Area styles for tablet */
+
+      footer {
+        outline: 1px solid red;
+      }
+  
+      .footer-content {
+      outline: 1px solid purple;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: row;
+      width: 80%;
+    }
+
+    .contact {
+      outline: 1px red solid;
+      width: 50%;
+    }
+
+    .social { 
+      outline: 1px solid green;
+      width: 50%;
+    }
+
+/* Tablet styles for About page here  */
+
+    .mission-content {
+      outline: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content:space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+      .mission-heading {
+        outline: 1px solid green;
+        width: 400px;
+      }
+
+      .paragraph-one {
+       outline: 1px solid blue; 
+       width: 400px;
+      }
+
+      .paragraph-two {
+      outline: 1px solid yellow;
+      width: 400px
+      }
+
+      .contact-section {
+        outline: 1px solid red;
+        width: 100%;
+      }
+
+      .contact-content {
+        outline: 1px solid green;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+
+
+      /* Tablet styles for FAQ Page here */
+
+      .faq-content {
+        outline: 1px solid green;
+        flex-basis: 40%;
+        justify-content: space-between;
+      }
+
+      .faq-title {
+        width: 100%;
+      }
+
+     
+  @media only screen and (min-width: 1200px) {
+    /*Desktop styles here*/
+    }
